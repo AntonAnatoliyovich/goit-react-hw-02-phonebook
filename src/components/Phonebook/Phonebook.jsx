@@ -1,4 +1,8 @@
 import { Component } from "react";
+import { ContactForm } from "./ContactForm";
+import { Filter } from "./Filter";
+// import { ContactList } from "./ContactList";
+import css from './Phonebook.module.css';
 
 class Phonebook extends Component {
     state = {
@@ -13,41 +17,30 @@ class Phonebook extends Component {
         })
     }
 
+    // createUser=(data)=>{
+    //     console.log(data)
+    // }
+
+    handleSubmit=(e)=>{
+        e.preventDefault()
+        this.props.createUser({
+            name: this.state.name,
+            number: this.state.number
+        })
+    }
+
     render() {
         return (
-            <div>
-                <h1>Phonebook</h1>
-                <form>
-                    <label htmlFor="">Name</label>
-                    <input
-                        type="text"
-                        name="name"
-                        pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
-                        title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
-                        required
-                        onChange={this.handleChange}
-                        value={this.state.name}
-                    />
-                    <label>Number</label>
-                    <input
-                        type="tel"
-                        name="number"
-                        pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
-                        title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
-                        required
-                        onChange={this.handleChange}
-                        value={this.state.number}
-                    />
-                    <button type="submit">Add contact</button>
-                </form>
-                <h1>Contacts</h1>
-                <ul>
-                    <li></li>
-                </ul>
+            <div className={css.phonebook__card}>
+                <h1 className={css.phonebook__title}>Phonebook</h1>
+                <ContactForm />
+
+                <h2 className={css.phonebook__title}>Contacts</h2>
+                <Filter />
+                {/* <ContactList /> */}
             </div>
         )
     }
 }
-
 
 export default Phonebook
