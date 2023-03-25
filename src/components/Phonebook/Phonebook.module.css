@@ -31,6 +31,7 @@
 }
 
 .form__input {
+    width: 75%;
     margin: 0 auto;
     padding-left: 25px;
     padding-right: 25px;
@@ -86,6 +87,7 @@
 }
 
 .filter__input {
+    width: 75%;
     margin: 0 auto;
     margin-bottom: 25px;
     padding-left: 25px;
