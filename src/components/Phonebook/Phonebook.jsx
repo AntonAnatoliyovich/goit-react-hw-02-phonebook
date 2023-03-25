@@ -1,7 +1,7 @@
 import { Component } from "react";
 import { ContactForm } from "./ContactForm";
 import { Filter } from "./Filter";
-// import { ContactList } from "./ContactList";
+import { ContactList } from "./ContactList";
 import css from './Phonebook.module.css';
 
 class Phonebook extends Component {
@@ -36,7 +36,7 @@ class Phonebook extends Component {
                 <ContactForm />
                 <h2 className={css.phonebook__title}>Contacts</h2>
                 <Filter />
-                {/* <ContactList /> */}
+                <ContactList />
             </div>
         )
     }
