@@ -34,7 +34,6 @@ class Phonebook extends Component {
             <div className={css.phonebook__card}>
                 <h1 className={css.phonebook__title}>Phonebook</h1>
                 <ContactForm />
-
                 <h2 className={css.phonebook__title}>Contacts</h2>
                 <Filter />
                 {/* <ContactList /> */}
