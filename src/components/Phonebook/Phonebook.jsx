@@ -28,6 +28,7 @@ class Phonebook extends Component {
     handleSubmit=(e)=>{
         e.preventDefault()
         let isContactExist
+        // eslint-disable-next-line array-callback-return
         this.state.contacts.map((contact) => {
             if(contact.name === this.state.name) {
                 return isContactExist=true
@@ -40,7 +41,7 @@ class Phonebook extends Component {
                 id: nanoid()
             })
         } else {
-                alert(this.state.name + ' is already in contacts')
+            alert(this.state.name + ' is already in contacts')
         }
     }
 
@@ -54,6 +55,7 @@ class Phonebook extends Component {
     }
 
     deleteContact=(id, name)=>{
+        // eslint-disable-next-line array-callback-return
         this.state[name].map((contact) => {
             if (contact.id === id) {
                 const index = this.state[name].indexOf(contact)
