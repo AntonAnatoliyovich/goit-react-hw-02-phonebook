@@ -1,10 +1,25 @@
 .phonebook__card {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contactform__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contactlist__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .phonebook__title {
-    margin: 0 auto;
     margin-top: 15px;
     margin-bottom: 15px;
     font-family: 'Open Sans';
@@ -104,12 +119,22 @@
 .contact__List {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
     margin-top: 0;
 }
 
 .contact__item {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-family: 'Open Sans';
+    color: #092658;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.contact__text {
+    margin-right: 10px;
     margin-top: 15px;
     margin-bottom: 15px;
     font-family: 'Open Sans';
